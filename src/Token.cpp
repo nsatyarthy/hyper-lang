@@ -7,5 +7,5 @@ Token::Token(TokenType type, std::string lexeme, std::string literal, int line)
 }
 
 std::string Token::toString() {
-    return "TODO: NOT IMPLEMENTED" ;
+    return tokenTypeToString(type_) + ", " +  lexeme_ + ", " + literal_;
 }
