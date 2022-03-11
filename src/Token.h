@@ -3,6 +3,7 @@
 #ifndef _TOKEN_H_
 #define _TOKEN_H_
 
+#include <string>
 
 enum class TokenType {
     LEFT_PAREN, RIGHT_PAREN, LEFT_BRACE, RIGHT_BRACE,
@@ -19,7 +20,15 @@ enum class TokenType {
 };
 
 class Token {
+public:
+    Token(TokenType type, std::string lexeme, std::string literal, int line);
+    std::string toString();
 
+private:
+    const TokenType type_;
+    const std::string lexeme_;
+    const std::string literal_;
+    const int line_;
 };
 
 
